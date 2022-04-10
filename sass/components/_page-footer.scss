@@ -1,0 +1,139 @@
+.footer {
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    background-color: $footerBgColor;
+}
+
+.footer__container {
+    display: flex;
+    align-items: baseline;
+}
+
+.footer__contact-wrapper {
+    display: block;
+    margin-right: 70px;
+}
+
+.footer__logo {
+    display: inline-block;
+    margin-bottom: 20px;
+    margin-right: 0;
+}
+
+
+// Footer Address
+.address__location {
+    display: block;
+    margin-bottom: 9px;
+
+    font-size: 14px;
+    line-height: 1.71;
+    font-style: normal;
+    letter-spacing: 0.03em;
+    color: $lightColor;
+}
+
+.address__item:not(:last-child) {
+    margin-bottom: 9px;
+}
+
+.address__link {
+    font-size: 14px;
+    line-height: 1.71;
+    font-style: normal;
+    letter-spacing: 0.03em;
+    color: rgba(255, 255, 255, 0.6);
+
+    transition: color $primaryDuration $primaryCubic;
+
+    &:hover, &:focus {
+        color: $accentColor;
+    }
+}
+
+// Footer Socials
+.footer__inner {
+    display: block;
+    margin-right: 93px;
+}
+
+.footer__title {
+    margin-bottom: 20px;
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: $lightColor;
+}
+
+// Footer Form
+.footer__form {
+    width: 570px;
+    height: 86px;
+}
+
+.footer__field {
+    display: inline-flex;
+}
+
+.footer__input {
+    padding: 15px 16px;
+    margin-right: 12px;
+    width: 358px;
+    height: 50px;
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: 0.03em;
+    color: rgba(255, 255, 255, 0.6);
+
+    background-color: $footerBgColor;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+
+    &::placeholder {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.25;
+        letter-spacing: 0.03em;
+        color: rgba(255, 255, 255, 0.6);
+    }
+}
+
+.footer__btn {
+    display: inline-flex;
+    align-items: center;
+    width: 200px;
+    height: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 29px;
+    padding-right: 28px;
+
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.06em;
+    color: $lightColor;
+
+    background-color: $accentColor;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+
+    transition: background-color $primaryDuration $primaryCubic;
+
+    &:hover, &:focus {
+        background-color: $hoverColorBtn;
+    }
+}
+
+.footer__icon {
+    margin-left: 10px;
+}
