@@ -9,7 +9,18 @@
 
     opacity: 1;
     transition: opacity $primaryDuration $primaryCubic,
-        visibility $primaryDuration $primaryCubic;
+    visibility $primaryDuration $primaryCubic;
+    
+
+    @media screen and (max-width: 767px) {
+        padding-top: 93px;
+        padding-bottom: 94px;
+        padding-right: 15px;
+        padding-left: 15px;
+
+        z-index: 2;
+        overflow-y: scroll;
+    }
 }
 
 .backdrop__is-hidden {

@@ -4,9 +4,13 @@
 
     font-weight: 700;
     font-size: 20px;
-    line-height: 1.15;
+    line-height: 1.5;
     letter-spacing: 0.03em;
     color: $primaryColor;
+
+    @media screen and (min-width: $desktop) {
+        line-height: 1.15;
+    }
 }
 
 // Form Group
@@ -144,27 +148,45 @@
         background-size: contain;
         background-origin: border-box;
     }
+
+    @media screen and (max-width: 479px) {
+        min-width: 16px;
+    }
 }
 
 .checkbox__desc {
     display: block;
     font-weight: 400;
-    font-size: 14px;
-    line-height: 1.71;
+    font-size: 12px;
+    line-height: 1.17;
     letter-spacing: 0.03em;
     color: $secondaryColor;
+
+    @media screen and (max-width: 479px) {
+        text-align: center;
+    }
+
+    @media screen and (min-width: $desktop) {
+        font-size: 14px;
+        line-height: 1.71;
+    }
 }
 
 .checkbox__link {
     position: relative;
 
     font-weight: 400;
-    font-size: 14px;
-    line-height: 1.71;
+    font-size: 12px;
+    line-height: 1.17;
     letter-spacing: 0.03em;
     color: $accentColor;
 
     text-decoration: none;
+
+    @media screen and (min-width: $desktop) {
+        font-size: 14px;
+        line-height: 1.71;
+    }
 
     &::after {
         content: "";

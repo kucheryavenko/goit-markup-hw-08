@@ -25,31 +25,63 @@
 
     <header class="page-header">
         <div class="container page-header__container">
-            <a class="logo link" href="./index.html" lang="en"><span class="logo__label logo__label--primary">Web</span><span
+            <a class="logo link" href="./index.html" lang="en"><span
+                    class="logo__label logo__label--primary">Web</span><span
                     class="logo__label logo__label--dark">Studio</span></a>
-            <nav class="nav">
-                <ul class="nav__list list">
-                    <li class="nav__item"><a class="nav__link link" href="./index.html">Студия</a></li>
-                    <li class="nav__item"><a class="nav__link link current" href="./portfolio.html">Портфолио</a></li>
-                    <li class="nav__item"><a class="nav__link link" href="">Контакты</a></li>
-                </ul>
-            </nav>
-            <ul class="contact list">
-                <li class="contact__item">
-                    <a class="contact__link link" href="mailto:info@devstudio.com">
-                        <svg class="contact__icon" width="16" height="12">
-                            <use href="./images/icons.svg#envelope"></use>
-                        </svg>
-                        info@devstudio.com</a>
-                </li>
-                <li class="contact__item">
-                    <a class="contact__link link" href="tel:+380961111111">
-                        <svg class="contact__icon" width="10" height="16">
-                            <use href="./images/icons.svg#smartphone"></use>
-                        </svg>
-                        +38 096 111 11 11</a>
-                </li>
-            </ul>
+    
+            <!-- Header Mobile Button -->
+
+            <button class="menu__button" type="button" aria-expanded="false" aria-controls="menu" data-menu-button>
+                <svg width="40" height="40" aria-label="Переключатель мобильного меню">
+                    <use class="menu__icon menu__icon--open" href="./images/icons.svg#menu"></use>
+                    <use class="menu__icon menu__icon--close" href="./images/icons.svg#cross"></use>
+                </svg>
+            </button>
+            
+            <!-- Header Mobile Menu -->
+
+            <div class="menu" id="menu" data-menu>
+    
+                <!-- Header Navigation -->
+
+                <nav class="nav">
+                    <ul class="nav__list list">
+                        <li class="nav__item"><a class="nav__link link" href="./index.html">Студия</a></li>
+                        <li class="nav__item"><a class="nav__link link current" href="./portfolio.html">Портфолио</a></li>
+                        <li class="nav__item"><a class="nav__link link" href="">Контакты</a></li>
+                    </ul>
+                </nav>
+                
+                <!-- Header Contact -->
+
+                <div class="communication">
+                    <ul class="contact list">
+                        <li class="contact__item contact__item--absolyte">
+                            <a class="contact__link link" href="mailto:info@devstudio.com">
+                                <svg class="contact__icon" width="16" height="12">
+                                    <use href="./images/icons.svg#envelope"></use>
+                                </svg>
+                                info@devstudio.com</a>
+                        </li>
+                        <li class="contact__item contact__item--bottom">
+                            <a class="contact__link contact__link--accent link" href="tel:+380961111111">
+                                <svg class="contact__icon" width="10" height="16">
+                                    <use href="./images/icons.svg#smartphone"></use>
+                                </svg>
+                                +38 096 111 11 11</a>
+                        </li>
+                    </ul>
+                    
+                    <!-- Mobile Social -->
+
+                    <ul class="socials-studio list">
+                        <li class="socials-studio__item"><a class="socials-studio__link link" href="">Instagram</a></li>
+                        <li class="socials-studio__item"><a class="socials-studio__link link" href="">Twitter</a></li>
+                        <li class="socials-studio__item"><a class="socials-studio__link link" href="">Facebook</a></li>
+                        <li class="socials-studio__item"><a class="socials-studio__link link" href="">LinkedIn</a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </header>
 
@@ -62,6 +94,9 @@
         <section class="portfolio section">
            <div class="container">
                 <h1 class="portfolio__title">Портфолио</h1>
+
+                <!-- Portfolio Filter Button -->
+
                 <ul class="filter list">
                     <li class="filter__item">
                         <button class="filter__btn" type="button">Все</button>
@@ -78,11 +113,32 @@
                         <button class="filter__btn" type="button">Маркетинг</button>
                     </li>
                 </ul>
+                
+                <!-- Portfolio Card-Set -->
+
                 <ul class="card-set list">
                     <li class="card-set__item">
                         <a class="card-set__link link" href="">
                             <div class="card-set__thumb">
-                                <img class="card-set__img" src="./images/portfolio/web.jpg" alt="Демонстрация веб-сайта" width="370" height="294">
+
+                                <picture>
+                                    <source srcset="./images/portfolio/mobile/web-450.webp 1x, ./images/portfolio/mobile/web-900.webp 2x" 
+                                        media="(max-width: 767px)" type="image/webp">
+                                    <source srcset="./images/portfolio/tablet/web-354.webp 1x, ./images/portfolio/tablet/web-708.webp 2x" 
+                                        media="(min-width: 768px) and (max-width: 1199px)" type="image/webp">
+                                    <source srcset="./images/portfolio/desktop/web-370.webp 1x, ./images/portfolio/desktop/web-740.webp 2x"
+                                        media="(min-width: 1200px)" type="image/webp">
+
+                                    <source srcset="./images/portfolio/mobile/web-450.jpg 1x, ./images/portfolio/mobile/web-900.jpg 2x"
+                                        media="(max-width: 767px)">
+                                    <source srcset="./images/portfolio/tablet/web-354.jpg 1x, ./images/portfolio/tablet/web-708.jpg 2x"
+                                        media="(min-width: 768px) and (max-width: 1199px)">
+                                    <source srcset="./images/portfolio/desktop/web-370.jpg 1x, ./images/portfolio/desktop/web-740.jpg 2x"
+                                        media="(min-width: 1200px)">
+
+                                    <img class="card-set__img" src="./images/portfolio/tablet/web-354.jpg" alt="Демонстрация веб-сайта">
+                                </picture>
+
                                 <div class="card-set__row">
                                     <p class="card-set__txt">
                                         Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю
@@ -100,7 +156,25 @@
                     <li class="card-set__item">
                         <a class="card-set__link link" href="">
                             <div class="card-set__thumb">
-                                <img class="card-set__img" src="./images/portfolio/poster.jpg" alt="Постер с баскетболистами" width="370" height="294">
+                                
+                                <picture>
+                                    <source srcset="./images/portfolio/mobile/poster-450.webp 1x, ./images/portfolio/mobile/poster-900.webp 2x"
+                                        media="(max-width: 767px)" type="image/webp">
+                                    <source srcset="./images/portfolio/tablet/poster-354.webp 1x, ./images/portfolio/tablet/poster-708.webp 2x"
+                                        media="(min-width: 768px) and (max-width: 1199px)" type="image/webp">
+                                    <source srcset="./images/portfolio/desktop/poster-370.webp 1x, ./images/portfolio/desktop/poster-740.webp 2x"
+                                        media="(min-width: 1200px)" type="image/webp">
+                                
+                                    <source srcset="./images/portfolio/mobile/poster-450.jpg 1x, ./images/portfolio/mobile/poster-900.jpg 2x"
+                                        media="(max-width: 767px)">
+                                    <source srcset="./images/portfolio/tablet/poster-354.jpg 1x, ./images/portfolio/tablet/poster-708.jpg 2x"
+                                        media="(min-width: 768px) and (max-width: 1199px)">
+                                    <source srcset="./images/portfolio/desktop/poster-370.jpg 1x, ./images/portfolio/desktop/poster-740.jpg 2x"
+                                        media="(min-width: 1200px)">
+                                
+                                    <img class="card-set__img" src="./images/portfolio/tablet/poster-354.jpg" alt="Постер с баскетболистами">
+                                </picture>
+
                                 <div class="card-set__row">
                                     <p class="card-set__txt">
                                         Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю
@@ -118,7 +192,25 @@
                     <li class="card-set__item">
                         <a class="card-set__link link" href="">
                             <div class="card-set__thumb">
-                                <img class="card-set__img" src="./images/portfolio/seafood.jpg" alt="Логотип ресторана" width="370" height="294">
+                                
+                                <picture>
+                                    <source srcset="./images/portfolio/mobile/seafood-450.webp 1x, ./images/portfolio/mobile/seafood-900.webp 2x"
+                                        media="(max-width: 767px)" type="image/webp">
+                                    <source srcset="./images/portfolio/tablet/seafood-354.webp 1x, ./images/portfolio/tablet/seafood-708.webp 2x"
+                                        media="(min-width: 768px) and (max-width: 1199px)" type="image/webp">
+                                    <source srcset="./images/portfolio/desktop/seafood-370.webp 1x, ./images/portfolio/desktop/seafood-740.webp 2x"
+                                        media="(min-width: 1200px)" type="image/webp">
+                                
+                                    <source srcset="./images/portfolio/mobile/seafood-450.jpg 1x, ./images/portfolio/mobile/seafood-900.jpg 2x"
+                                        media="(max-width: 767px)">
+                                    <source srcset="./images/portfolio/tablet/seafood-354.jpg 1x, ./images/portfolio/tablet/seafood-708.jpg 2x"
+                                        media="(min-width: 768px) and (max-width: 1199px)">
+                                    <source srcset="./images/portfolio/desktop/seafood-370.jpg 1x, ./images/portfolio/desktop/seafood-740.jpg 2x"
+                                        media="(min-width: 1200px)">
+                                
+                                    <img class="card-set__img" src="./images/portfolio/tablet/seafood-354.jpg" alt="Логотип ресторана">
+                                </picture>
+
                                 <div class="card-set__row">
                                     <p class="card-set__txt">
                                         Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю
@@ -136,7 +228,25 @@
                     <li class="card-set__item">
                         <a class="card-set__link link" href="">
                             <div class="card-set__thumb">
-                                <img class="card-set__img" src="./images/portfolio/prime.jpg" alt="Закрытые наушники" width="370" height="294">
+                                
+                                <picture>
+                                    <source srcset="./images/portfolio/mobile/prime-450.webp 1x, ./images/portfolio/mobile/prime-900.webp 2x"
+                                        media="(max-width: 767px)" type="image/webp">
+                                    <source srcset="./images/portfolio/tablet/prime-354.webp 1x, ./images/portfolio/tablet/prime-708.webp 2x"
+                                        media="(min-width: 768px) and (max-width: 1199px)" type="image/webp">
+                                    <source srcset="./images/portfolio/desktop/prime-370.webp 1x, ./images/portfolio/desktop/prime-740.webp 2x"
+                                        media="(min-width: 1200px)" type="image/webp">
+                                
+                                    <source srcset="./images/portfolio/mobile/prime-450.jpg 1x, ./images/portfolio/mobile/prime-900.jpg 2x"
+                                        media="(max-width: 767px)">
+                                    <source srcset="./images/portfolio/tablet/prime-354.jpg 1x, ./images/portfolio/tablet/prime-708.jpg 2x"
+                                        media="(min-width: 768px) and (max-width: 1199px)">
+                                    <source srcset="./images/portfolio/desktop/prime-370.jpg 1x, ./images/portfolio/desktop/prime-740.jpg 2x"
+                                        media="(min-width: 1200px)">
+                                
+                                    <img class="card-set__img" src="./images/portfolio/tablet/prime-354.jpg" alt="Закрытые наушники">
+                                </picture>
+
                                 <div class="card-set__row">
                                     <p class="card-set__txt">
                                         Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю
@@ -154,7 +264,25 @@
                     <li class="card-set__item">
                         <a class="card-set__link link" href="">
                             <div class="card-set__thumb">
-                                <img class="card-set__img" src="./images/portfolio/boxes.jpg" alt="Коробки" width="370" height="294">
+
+                                <picture>
+                                    <source srcset="./images/portfolio/mobile/boxes-450.webp 1x, ./images/portfolio/mobile/boxes-900.webp 2x"
+                                        media="(max-width: 767px)" type="image/webp">
+                                    <source srcset="./images/portfolio/tablet/boxes-354.webp 1x, ./images/portfolio/tablet/boxes-708.webp 2x"
+                                        media="(min-width: 768px) and (max-width: 1199px)" type="image/webp">
+                                    <source srcset="./images/portfolio/desktop/boxes-370.webp 1x, ./images/portfolio/desktop/boxes-740.webp 2x"
+                                        media="(min-width: 1200px)" type="image/webp">
+                                
+                                    <source srcset="./images/portfolio/mobile/boxes-450.jpg 1x, ./images/portfolio/mobile/boxes-900.jpg 2x"
+                                        media="(max-width: 767px)">
+                                    <source srcset="./images/portfolio/tablet/boxes-354.jpg 1x, ./images/portfolio/tablet/boxes-708.jpg 2x"
+                                        media="(min-width: 768px) and (max-width: 1199px)">
+                                    <source srcset="./images/portfolio/desktop/boxes-370.jpg 1x, ./images/portfolio/desktop/boxes-740.jpg 2x"
+                                        media="(min-width: 1200px)">
+                                
+                                    <img class="card-set__img" src="./images/portfolio/tablet/boxes-354.jpg" alt="Коробки">
+                                </picture>
+
                                 <div class="card-set__row">
                                     <p class="card-set__txt">
                                         Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю
@@ -172,8 +300,25 @@
                     <li class="card-set__item">
                         <a class="card-set__link link" href="">
                             <div class="card-set__thumb">
-                                <img class="card-set__img" src="./images/portfolio/inspiration.jpg" alt="Демонстрация веб-сайта" width="370"
-                                    height="294">
+                                
+                                <picture>
+                                    <source srcset="./images/portfolio/mobile/inspiration-450.webp 1x, ./images/portfolio/mobile/inspiration-900.webp 2x"
+                                        media="(max-width: 767px)" type="image/webp">
+                                    <source srcset="./images/portfolio/tablet/inspiration-354.webp 1x, ./images/portfolio/tablet/inspiration-708.webp 2x"
+                                        media="(min-width: 768px) and (max-width: 1199px)" type="image/webp">
+                                    <source srcset="./images/portfolio/desktop/inspiration-370.webp 1x, ./images/portfolio/desktop/inspiration-740.webp 2x"
+                                        media="(min-width: 1200px)" type="image/webp">
+                                
+                                    <source srcset="./images/portfolio/mobile/inspiration-450.jpg 1x, ./images/portfolio/mobile/inspiration-900.jpg 2x"
+                                        media="(max-width: 767px)">
+                                    <source srcset="./images/portfolio/tablet/inspiration-354.jpg 1x, ./images/portfolio/tablet/inspiration-708.jpg 2x"
+                                        media="(min-width: 768px) and (max-width: 1199px)">
+                                    <source srcset="./images/portfolio/desktop/inspiration-370.jpg 1x, ./images/portfolio/desktop/inspiration-740.jpg 2x"
+                                        media="(min-width: 1200px)">
+                                
+                                    <img class="card-set__img" src="./images/portfolio/tablet/inspiration-354.jpg" alt="Демонстрация веб-сайта">
+                                </picture>
+
                                 <div class="card-set__row">
                                     <p class="card-set__txt">
                                         Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю
@@ -191,7 +336,29 @@
                     <li class="card-set__item">
                         <a class="card-set__link link" href="">
                             <div class="card-set__thumb">
-                                <img class="card-set__img" src="./images/portfolio/edition.jpg" alt="Издание в развороте" width="370" height="294">
+                                
+                                <picture>
+                                    <source
+                                        srcset="./images/portfolio/mobile/edition-450.webp 1x, ./images/portfolio/mobile/edition-900.webp 2x"
+                                        media="(max-width: 767px)" type="image/webp">
+                                    <source
+                                        srcset="./images/portfolio/tablet/edition-354.webp 1x, ./images/portfolio/tablet/edition-708.webp 2x"
+                                        media="(min-width: 768px) and (max-width: 1199px)" type="image/webp">
+                                    <source
+                                        srcset="./images/portfolio/desktop/edition-370.webp 1x, ./images/portfolio/desktop/edition-740.webp 2x"
+                                        media="(min-width: 1200px)" type="image/webp">
+                                
+                                    <source srcset="./images/portfolio/mobile/edition-450.jpg 1x, ./images/portfolio/mobile/edition-900.jpg 2x"
+                                        media="(max-width: 767px)">
+                                    <source srcset="./images/portfolio/tablet/edition-354.jpg 1x, ./images/portfolio/tablet/edition-708.jpg 2x"
+                                        media="(min-width: 768px) and (max-width: 1199px)">
+                                    <source
+                                        srcset="./images/portfolio/desktop/edition-370.jpg 1x, ./images/portfolio/desktop/edition-740.jpg 2x"
+                                        media="(min-width: 1200px)">
+                                
+                                    <img class="card-set__img" src="./images/portfolio/tablet/edition-354.jpg" alt="Издание в развороте">
+                                </picture>
+
                                 <div class="card-set__row">
                                     <p class="card-set__txt">
                                         Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю
@@ -209,7 +376,25 @@
                     <li class="card-set__item">
                         <a class="card-set__link link" href="">
                             <div class="card-set__thumb">
-                                <img class="card-set__img" src="./images/portfolio/lab.jpg" alt="Бирка продукта" width="370" height="294">
+                                
+                                <picture>
+                                    <source srcset="./images/portfolio/mobile/lab-450.webp 1x, ./images/portfolio/mobile/lab-900.webp 2x"
+                                        media="(max-width: 767px)" type="image/webp">
+                                    <source srcset="./images/portfolio/tablet/lab-354.webp 1x, ./images/portfolio/tablet/lab-708.webp 2x"
+                                        media="(min-width: 768px) and (max-width: 1199px)" type="image/webp">
+                                    <source srcset="./images/portfolio/desktop/lab-370.webp 1x, ./images/portfolio/desktop/lab-740.webp 2x"
+                                        media="(min-width: 1200px)" type="image/webp">
+                                
+                                    <source srcset="./images/portfolio/mobile/lab-450.jpg 1x, ./images/portfolio/mobile/lab-900.jpg 2x"
+                                        media="(max-width: 767px)">
+                                    <source srcset="./images/portfolio/tablet/lab-354.jpg 1x, ./images/portfolio/tablet/lab-708.jpg 2x"
+                                        media="(min-width: 768px) and (max-width: 1199px)">
+                                    <source srcset="./images/portfolio/desktop/lab-370.jpg 1x, ./images/portfolio/desktop/lab-740.jpg 2x"
+                                        media="(min-width: 1200px)">
+                                
+                                    <img class="card-set__img" src="./images/portfolio/tablet/lab-354.jpg" alt="Бирка продукта">
+                                </picture>
+
                                 <div class="card-set__row">
                                     <p class="card-set__txt">
                                         Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю
@@ -227,7 +412,25 @@
                     <li class="card-set__item">
                         <a class="card-set__link link" href="">
                             <div class="card-set__thumb">
-                                <img class="card-set__img" src="./images/portfolio/business.jpg" alt="Демонстрация приложения" width="370" height="294">
+                               
+                                <picture>
+                                    <source srcset="./images/portfolio/mobile/business-450.webp 1x, ./images/portfolio/mobile/business-900.webp 2x"
+                                        media="(max-width: 767px)" type="image/webp">
+                                    <source srcset="./images/portfolio/tablet/business-354.webp 1x, ./images/portfolio/tablet/business-708.webp 2x"
+                                        media="(min-width: 768px) and (max-width: 1199px)" type="image/webp">
+                                    <source srcset="./images/portfolio/desktop/business-370.webp 1x, ./images/portfolio/desktop/business-740.webp 2x"
+                                        media="(min-width: 1200px)" type="image/webp">
+                                
+                                    <source srcset="./images/portfolio/mobile/business-450.jpg 1x, ./images/portfolio/mobile/business-900.jpg 2x"
+                                        media="(max-width: 767px)">
+                                    <source srcset="./images/portfolio/tablet/business-354.jpg 1x, ./images/portfolio/tablet/business-708.jpg 2x"
+                                        media="(min-width: 768px) and (max-width: 1199px)">
+                                    <source srcset="./images/portfolio/desktop/business-370.jpg 1x, ./images/portfolio/desktop/business-740.jpg 2x"
+                                        media="(min-width: 1200px)">
+                                
+                                    <img class="card-set__img" src="./images/portfolio/tablet/business-354.jpg" alt="Демонстрация приложения">
+                                </picture>
+
                                 <div class="card-set__row">
                                     <p class="card-set__txt">
                                         Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю
@@ -328,5 +531,7 @@
         </div>
     </footer>
     
+    <script src="./js/menu.js"></script>
+
 </body>
 </html>
