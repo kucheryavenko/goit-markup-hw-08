@@ -8,7 +8,9 @@ body {
     background-color: $lightColor;
 
     &.modal-open {
-        overflow: hidden;
+        @media screen and (max-width: 1199px) {
+            overflow: hidden;
+        }  
     }
 
     &.data-menu {
@@ -48,10 +50,6 @@ img {
 }
 
 .container {
-    // width: 1200px;
-
-    outline: 1px solid tomato;
-
     padding-left: 15px;
     padding-right: 15px;
     margin-left: auto;
@@ -72,15 +70,12 @@ img {
 
 
 .section {
-
-    outline: 1px solid green;
-    
     padding-top: 60px;
     padding-bottom: 60px;
 
     @media screen and (min-width: $desktop) {
-    padding-top: 94px;
-    padding-bottom: 94px;  
+        padding-top: 94px;
+        padding-bottom: 94px;  
     }
 }
 

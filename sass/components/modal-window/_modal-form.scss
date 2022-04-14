@@ -149,6 +149,10 @@
         background-origin: border-box;
     }
 
+    .checkbox__input:focus + & {
+        border: 2px solid $accentColor;
+    }
+
     @media screen and (max-width: 479px) {
         min-width: 16px;
     }
