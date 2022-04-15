@@ -121,6 +121,7 @@ img {
 @media screen and (max-width: 767px) {
   .page-header__container {
     position: relative;
+    width: 100vw;
   }
 }
 
@@ -216,9 +217,6 @@ img {
     font-size: 40px;
     line-height: 1.18;
     letter-spacing: 0.02em;
-  }
-  .nav__item:last-child {
-    margin-bottom: 0;
   }
 }
 
