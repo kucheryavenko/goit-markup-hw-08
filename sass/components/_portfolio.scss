@@ -101,6 +101,7 @@
         display: flex;
         flex-direction: column;
         height: 100%;
+        height: 100%;
     }
 
     transition: box-shadow $primaryDuration $primaryCubic;
@@ -124,9 +125,17 @@
     left: 0;
     transform: translateY(100%);
     display: block;
-    // width: 100%;
+    width: 100%;
+    
+    @media screen and (max-width: 399px) {
+        padding: 37px 24px;
+    }
 
-    @media screen and (max-width: 767px) {
+    @media screen and (min-width: 400px) and (max-width: 449px) {
+        padding: 62px 24px;
+    }
+    
+    @media screen and (min-width: 450px) and (max-width: 767px) {
         padding: 77px 24px;
     }
 
@@ -156,6 +165,22 @@
     line-height: 1.56;
     letter-spacing: 0.03em;
     color: $lightColor;
+
+    @media screen and (max-width: 328px) {
+        font-size: 14px;
+    }
+    
+    @media screen and (min-width: 329px) and (max-width: 344px) {
+        font-size: 15px;
+    }
+
+    @media screen and (min-width: 345px) and (max-width: 361px) {
+        font-size: 16px;
+    }
+
+    @media screen and (min-width: 362px) and (max-width: 379px) {
+        font-size: 17px;
+    }
 }
 
 .card-set__meta {

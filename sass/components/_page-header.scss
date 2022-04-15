@@ -29,7 +29,7 @@
     border: none;
     background-color: transparent;
     
-    z-index: 1;
+    z-index: 2;
     cursor: pointer;
 
     @media screen and (min-width: $tablet) {
@@ -63,9 +63,6 @@
 }
 
 .menu {
-    @media screen and (max-width: $mobile) {
-        width: 100vw;
-    }
 
     @media screen and (max-width: 767px) {
         display: none;
@@ -74,10 +71,12 @@
         top: 0;
         left: 0;
         width: 100%;
-        height: 90vh;
+        height: 100vh;
         
         background-color: $lightColor;
         padding: 48px 40px;
+
+        z-index: 1;
         
         &.is-open {
             display: flex;
@@ -257,7 +256,7 @@
         } 
 
         @media screen and (max-width: 379px) {
-            font-size: 28px;
+            font-size: 27px;
         }
     }
 
